@@ -85,13 +85,15 @@
 	.icons >>> .swiper-container
 		height: 0
 		padding-bottom: 50%
-		.icon
-			position: relative
-			overflow: hidden
-			float: left
-			height: 0
-			width: 25%
-			padding-bottom: 25%
+	.icons
+		margin-top: .1rem
+		  	.icon
+				position: relative
+				overflow: hidden
+				float: left
+				height: 0
+				width: 25%
+				padding-bottom: 25%
 			.icon-img
 				position: absolute
 				top: 0
