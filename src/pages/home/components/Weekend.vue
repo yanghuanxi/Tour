@@ -3,7 +3,7 @@
 		<div class="title">周末去哪儿</div>
 		<ul>
 			<li class="item border-bottom" 
-			v-for="item of recommendList"
+			v-for="item of list"
 			:key="item.id">
 				<div class="item-img-wrapper">
 				  <img class="item-img" :src="item.imgUrl" />			
@@ -23,30 +23,8 @@
 <script>
 	export default {
 		name: 'HomeRecommend',
-		data () {
-			return {
-				recommendList: [{
-					id: '0001',
-					imgUrl: 'http://img1.qunarzz.com/sight/source/1505/70/a6196946cf72.jpg_r_640x214_6482dda7.jpg',
-					title: '温泉水上乐园',
-					desc: '泡温泉，吹海风，生活如此美妙惬意'
-				}, {
-					id: '0002',
-					imgUrl: 'http://img1.qunarzz.com/sight/source/1505/70/a6196946cf72.jpg_r_640x214_6482dda7.jpg',
-					title: '温泉水上乐园',
-					desc: '泡温泉，吹海风，生活如此美妙惬意'
-				}, {
-					id: '0003',
-					imgUrl: 'http://img1.qunarzz.com/sight/source/1505/70/a6196946cf72.jpg_r_640x214_6482dda7.jpg',
-					title: '温泉水上乐园',
-					desc: '泡温泉，吹海风，生活如此美妙惬意'
-				}, {
-					id: '0004',
-					imgUrl: 'http://img1.qunarzz.com/sight/source/1505/70/a6196946cf72.jpg_r_640x214_6482dda7.jpg',
-					title: '温泉水上乐园',
-					desc: '泡温泉，吹海风，生活如此美妙惬意'
-				},]
-			}
+		props: {
+			list: Array
 		}
 	}
 
@@ -55,14 +33,13 @@
 <style lang="stylus" scoped>
 	@import '~styles/mixins.styl'
 	.title
-		margin-top: .2rem
 		line-height: .8rem
 		background: #eee
 		text-indent: .2rem
 	.item-img-wrapper
 		overflow: hidden
 		height: 0
-		padding-bottom: 33.9%
+		padding-bottom: 37.09%
 	.item-img
 		width: 100%
 	.item-info
